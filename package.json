@@ -1,0 +1,15 @@
+{
+  "name": "cypress_with_ts",
+  "version": "1.0.0",
+  "description": "pure_cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elvedin",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.10.0",
+    "typescript": "^5.4.5"
+  }
+}
