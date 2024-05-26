@@ -5,12 +5,12 @@ describe("template spec", () => {
     cy.visit("/");
   });
 
-  it("Input User Name", () => {
-    cy.inputTxtInField("Username Field", "standard_user");
+  it("Input User Name in field Username", () => {
+    cy.inputTxtInField("usernameField", "standard_user");
   });
 
-  it("Input Password", () => {
-    cy.inputTxtInField("Password Field", "secret_sauce");
+  it("Input Password in field Password", () => {
+    cy.inputTxtInField("passwordField", "secret_sauce");
   });
 
   it("Click On Login", () => {
