@@ -40,32 +40,32 @@
 */
 
 import cypress = require("cypress");
-import selectors from "../fixtures/selectors.json";
-import { loginPage } from "../pageObjects/loginPage.action.cy";
+//import selectors from "../fixtures/loginPageSelectors.json";
+import { loginPagePom } from "../pageObjects/loginPagePom.action.cy";
 
 //--------------------------------------------------------------
 //##############################################################
 // Eingabe aus den geschweiften klammern
 Cypress.Commands.add("inputTxtInField", (field: string, text: string) => {
-  if (!(text in loginPage)) {
+  if (!(text in loginPagePom)) {
     throw new Error(
-      `Unsported Field, please update the Switch statment ${text}`
+      `Unsported Field, please update the statment: ${text}`
     );
   }
 
-  const fieldSelector = loginPage[field];
+  const fieldSelector = loginPagePom[field];
   cy.get(fieldSelector).should("exist").type(text);
 });
 
 //--------------------------------------------------------------
 //##############################################################
 Cypress.Commands.add("clickOnElement", (btnElement: string) => {
-  if (!(btnElement in loginPage)) {
+  if (!(btnElement in loginPagePom)) {
     throw new Error(
-      `Unsported Btn, please update the Switch statment ${btnElement}`
+      `Unsported Btn, please update the statment: ${btnElement}`
     );
   }
 
-  const btnSelector = loginPage[btnElement];
+  const btnSelector = loginPagePom[btnElement];
   cy.get(btnSelector).should("exist").click();
 });
