@@ -13,8 +13,23 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+/// <reference types="cypress" />
+
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// -----------------------------------------------
+// Deklaration für benutzderdefinierte Cypress-Befehle
+// wird für die Cypress.Commands.add benötigt
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      clickOnElement(element: string): void;
+      inputTxtInField(field: String, text: string): void;
+    }
+  }
+}
