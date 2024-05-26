@@ -1,0 +1,6 @@
+{
+  "products": {
+    "_comment": "Dieser Text ist ein Kommentar",
+    "backpack": "[data-test='add-to-cart-sauce-labs-backpack']"
+  }
+}
