@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+
+/* 
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -34,4 +36,36 @@
 //       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
 //     }
 //   }
-// }
+// } 
+*/
+
+import cypress = require("cypress");
+import selectors from "../fixtures/selectors.json";
+import { loginPage } from "../pageObjects/loginPage.action.cy";
+
+//--------------------------------------------------------------
+//##############################################################
+// Eingabe aus den geschweiften klammern
+Cypress.Commands.add("inputTxtInField", (field: string, text: string) => {
+  if (!(text in loginPage)) {
+    throw new Error(
+      `Unsported Field, please update the Switch statment ${text}`
+    );
+  }
+
+  const fieldSelector = loginPage[field];
+  cy.get(fieldSelector).should("exist").type(text);
+});
+
+//--------------------------------------------------------------
+//##############################################################
+Cypress.Commands.add("clickOnElement", (btnElement: string) => {
+  if (!(btnElement in loginPage)) {
+    throw new Error(
+      `Unsported Btn, please update the Switch statment ${btnElement}`
+    );
+  }
+
+  const btnSelector = loginPage[btnElement];
+  cy.get(btnSelector).should("exist").click();
+});
