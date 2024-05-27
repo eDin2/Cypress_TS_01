@@ -7,6 +7,7 @@ describe("template spec", () => {
 
   it("Input User Name in field Username", () => {
     cy.inputTxtInField("usernameField", "standard_user");
+    // TODO: weitere abfragen, überprüfung der Seite auf rchtigkeit etc.
   });
 
   it("Input Password in field Password", () => {
