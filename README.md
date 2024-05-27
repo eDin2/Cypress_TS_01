@@ -1,49 +1,40 @@
-# Cypress + Cucumber + TypeScript
+# Cypress + TypeScript
 Cypress with TS 
 
-# Login Feature
+# Login Feature Test Suite
 
-Dieses Repository enthält die Cypress-Tests für das Login-Feature, implementiert mit dem Cucumber-Preprocessor.
+Diese Test Suite verwendet Cypress und TypeScript, um das Login-Feature einer Webanwendung zu testen.
 
-## Überblick
+## Beschreibung
 
-Das Login-Feature ermöglicht es Benutzern, sich sicher in die Anwendung einzuloggen. Die Tests decken das Laden der Seite, die Eingabe von Benutzerdaten und das Klicken auf den Login-Button ab.
+Die Test Suite simuliert den Login-Prozess eines Benutzers, indem sie die Eingabe von Benutzername und Passwort sowie das Klicken auf den Login-Button automatisiert.
 
-## Szenarien
+## Setup
 
-- **Seite laden**: Öffnet die Startseite der Anwendung.
-- **User Namen Input**: Eingabe des Benutzernamens in das entsprechende Feld.
-- **Passwort Input**: Eingabe des Passworts in das entsprechende Feld.
-- **Klick auf Login**: Betätigen des Login-Buttons, um den Anmeldevorgang abzuschließen.
-
-## Technische Details
-### Voraussetzungen
-- Node.js
-- Cypress
-- @badeball/cypress-cucumber-preprocessor
-
-### Setup
-Installieren Sie die Abhängigkeiten mit:
+Stellen Sie sicher, dass Sie die neueste Version von Node.js installiert haben und führen Sie dann folgenden Befehl aus, um Cypress und andere Abhängigkeiten zu installieren:
 bash
 npm install
 
 *****
 
-## Tests ausführen
-Starten Sie die Tests mit:
+Testausführung
+Um die Tests zu starten, führen Sie den folgenden Befehl aus:
 npx cypress open
-
-
-******
-
-## Testimplementierung:
-Die Testimplementierung verwendet die Gherkin-Syntax für die Szenarien und die Cypress-Befehle für die Interaktion mit der Webanwendung.
 
 *****
 
-Konfiguration
-Die Selektoren und Benutzerdaten sind in einer selectors.json Datei definiert, um die Wartung zu erleichtern.
+Testfälle
+Die Testfälle sind wie folgt definiert:
+
+Seite besuchen: Besucht die Startseite der Anwendung.
+Benutzernamen eingeben: Gibt den Benutzernamen standard_user in das Feld für den Benutzernamen ein.
+Passwort eingeben: Gibt das Passwort secret_sauce in das Feld für das Passwort ein.
+Auf Login klicken: Klickt auf den Login-Button, um den Anmeldevorgang abzuschließen.
+Selektoren und Daten
+Die Selektoren und Benutzerdaten werden in einer separaten JSON-Datei (loginPageSelectors.json) verwaltet, um die Wartung zu erleichtern.
+
+Interface
+Das Interface LoginPageSelectors definiert die Typen für die Selektoren und Benutzerdaten, um Typsicherheit zu gewährleisten.
 
 Mitwirken
-Ich begrüßen Beiträge zu diesem Projekt. 
-Bitte erstellen Sie einen Pull Request oder ein Issue, um Verbesserungen vorzuschlagen.
+Beiträge zu dieser Test Suite sind willkommen. Bitte senden Sie Pull Requests oder erstellen Sie Issues, um Verbesserungen vorzuschlagen.
