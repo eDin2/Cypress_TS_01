@@ -1,4 +1,4 @@
-# Cypress + TypeScript
+# Cypress + Cucumber + TypeScript
 Cypress with TS 
 
 # Login Feature
