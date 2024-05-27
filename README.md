@@ -1,4 +1,4 @@
-# Cypress_TS_01
+# Cypress + TypeScript
 Cypress with TS 
 
 # Login Feature
