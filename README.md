@@ -24,8 +24,7 @@ Das Login-Feature ermöglicht es Benutzern, sich sicher in die Anwendung einzulo
 
 ### Setup
 Installieren Sie die Abhängigkeiten mit:
-
-# bash
+bash
 npm install
 
 *****
