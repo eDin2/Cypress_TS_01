@@ -45,12 +45,13 @@ import { loginPagePom } from "../pageObjects/loginPagePom.action.cy";
 
 //--------------------------------------------------------------
 //##############################################################
-// Eingabe aus den geschweiften klammern
+// Eingabe der Parameter erfolgt über die loginPagePom.action.cy.ts
+// field - ist das Inputfeld auf der jeweiligen Page
+// text - ist der text der in das jeweilige Iputfeld eingegeben wird
+//--------------------------------------------------------------
 Cypress.Commands.add("inputTxtInField", (field: string, text: string) => {
   if (!(text in loginPagePom)) {
-    throw new Error(
-      `Unsported Field, please update the statment: ${text}`
-    );
+    throw new Error(`Unsported Field, please update the statment: ${text}`);
   }
 
   const fieldSelector = loginPagePom[field];
@@ -61,9 +62,7 @@ Cypress.Commands.add("inputTxtInField", (field: string, text: string) => {
 //##############################################################
 Cypress.Commands.add("clickOnElement", (btnElement: string) => {
   if (!(btnElement in loginPagePom)) {
-    throw new Error(
-      `Unsported Btn, please update the statment: ${btnElement}`
-    );
+    throw new Error(`Unsported Btn, please update the statment: ${btnElement}`);
   }
 
   const btnSelector = loginPagePom[btnElement];
