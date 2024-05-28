@@ -12,13 +12,11 @@ Cypress with TS
 	- bash
 	  npm install
 
-*****
 
 ## Testausführung
 - Um die Tests zu starten, führen Sie den folgenden Befehl aus:
 	- npx cypress open
 
-*****
 
 ## Testfälle
 - Die Testfälle sind wie folgt definiert:
