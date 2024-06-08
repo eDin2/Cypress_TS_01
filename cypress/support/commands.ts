@@ -47,7 +47,7 @@ import { loginPagePom } from "../pageObjects/loginPagePom.action.cy";
 //##############################################################
 // Eingabe der Parameter erfolgt über die loginPagePom.action.cy.ts
 // field - ist das Inputfeld auf der jeweiligen Page
-// text - ist der text der in das jeweilige Iputfeld eingegeben wird
+// text - ist der text der in das jeweilige Inputfeld eingegeben wird
 //--------------------------------------------------------------
 Cypress.Commands.add("inputTxtInField", (field: string, text: string) => {
   if (!(text in loginPagePom)) {
