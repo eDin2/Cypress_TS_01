@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import selectors from "../fixtures/loginPageSelectors.json";
+import selectors from "../fixtures/appSelectors.json";
 
 // Definieren Sie ein spezifischeres Interface für die Login-Seite
 // ****************************************************************
