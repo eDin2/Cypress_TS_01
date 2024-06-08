@@ -7,7 +7,7 @@ describe("template spec", () => {
 
   it("Input User Name in field Username", () => {
     cy.inputTxtInField("usernameField", "standard_user");
-    // TODO: weitere abfragen, überprüfung der Seite auf rchtigkeit etc.
+    // parameter werden aus loginPagePom.action.cy.ts herangezogen, wenn der Parameter nicht genaus so wie in loginPagePom.action.cy.ts eingegeben wird, wird der selector auch nicht erkannt
   });
 
   it("Input Password in field Password", () => {
