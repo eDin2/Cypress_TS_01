@@ -40,8 +40,8 @@
 */
 
 import cypress = require("cypress");
-//import selectors from "../fixtures/loginPageSelectors.json";
-import { loginPagePom } from "../pageObjects/loginPagePom.action.cy";
+//import selectors from "../fixtures/appSelectors.json";
+import { loginPagePom } from "../interfaceActions/IndexPageSelectors.cy";
 
 //--------------------------------------------------------------
 //##############################################################
@@ -50,21 +50,22 @@ import { loginPagePom } from "../pageObjects/loginPagePom.action.cy";
 // text - ist der text der in das jeweilige Inputfeld eingegeben wird
 //--------------------------------------------------------------
 Cypress.Commands.add("inputTxtInField", (field: string, text: string) => {
-  if (!(text in loginPagePom)) {
-    throw new Error(`Unsported Field, please update the statment: ${text}`);
+  if (!(field in loginPagePom)) {
+    throw new Error(`Unsupported Field, please update the statement: ${field}`);
   }
 
   const fieldSelector = loginPagePom[field];
-  cy.get(fieldSelector).should("exist").type(text);
+  cy.get(fieldSelector).should("exist").should("be.visible").type(text);
 });
 
-//--------------------------------------------------------------
-//##############################################################
+
 Cypress.Commands.add("clickOnElement", (btnElement: string) => {
   if (!(btnElement in loginPagePom)) {
-    throw new Error(`Unsported Btn, please update the statment: ${btnElement}`);
+    throw new Error(
+      `Unsupported Btn, please update the statement: ${btnElement}`
+    );
   }
 
   const btnSelector = loginPagePom[btnElement];
-  cy.get(btnSelector).should("exist").click();
+  cy.get(btnSelector).should("exist").should("be.visible").click();
 });
