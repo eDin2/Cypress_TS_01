@@ -17,4 +17,8 @@ describe("template spec", () => {
   it("Click On Login", () => {
     cy.clickOnElement("Login");
   });
+
+  it("Check if the URL is correct after login", () => {
+    cy.url().should("include", "/inventory"); // Überprüfe, ob die URL nach dem Login korrekt ist
+  });
 });
